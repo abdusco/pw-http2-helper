@@ -1,0 +1,27 @@
+<?php namespace Processwire;
+/**
+ * Created by PhpStorm.
+ * User: Abdus
+ * Date: 8.04.2017
+ * Time: 23:24
+ */
+
+class Http2Helper extends Wire implements Module {
+
+    public static function getModuleInfo()
+    {
+        return [
+            'title' => 'HTTP2 Push Helper',
+            'summary' => 'Utility class',
+            'version' => '0.0.1',
+            'autoload' => true,
+            'singular' => true,
+        ];
+    }
+
+    public function init()
+    {
+        require_once __DIR__ . '/H2Push.php';
+    }
+
+}
